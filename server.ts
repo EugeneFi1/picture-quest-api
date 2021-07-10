@@ -1,4 +1,5 @@
 import {QuestController} from "./server/controller/quest.controller";
+import {Quest} from "./model/quest.model";
 
 require('dotenv').config();
 const express = require("express");
@@ -14,9 +15,10 @@ app.use(function (req, res, next) {
 });
 
 app.get("/quest/:command", (req, res) => {
+    console.log("get-all");
     const command: string = req.params.command;
     if (command === "get-all") {
-        QuestController.getAll().then((allTasks: string[]) => {
+        QuestController.getAll().then((allTasks: Quest[]) => {
             res.send(allTasks);
         }).catch(error => {
             res.send(error);
