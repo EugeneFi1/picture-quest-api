@@ -1,5 +1,5 @@
-import {QuestController} from "./server/controller/quest.controller";
-import {Quest} from "./model/quest.model";
+import {QuestController} from "./controller/quest.controller";
+import {Quest} from "../model/quest.model";
 
 require('dotenv').config();
 const express = require("express");

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start-server": "ts-node server.ts"
+    "start-server": "ts-node server/server.ts"
   },
   "license": "ISC",
   "dependencies": {
