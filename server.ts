@@ -1,8 +1,9 @@
 import {QuestController} from "./server/controller/quest.controller";
 
+require('dotenv').config();
 const express = require("express");
 const app = express();
-const port = 7600;
+const port = process.env.PORT;
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,6 +24,6 @@ app.get("/quest/:command", (req, res) => {
     }
 })
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
 });
