@@ -7,5 +7,23 @@ export class Quest {
 
     @Column()
     name: string;
-    // TO DO: add all Fields
+
+    @Column()
+    description: string;
+
+    @Column()
+    picture: string;
+
+    @Column()
+    explanation: string;
+
+    @Column()
+    replyStrategy: string;
+
+    @Column()
+    userName: string;
+
+    @Column()
+    showStrategy: number;
+
 }
